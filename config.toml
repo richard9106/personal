@@ -1,0 +1,38 @@
+# The URL the site will be built for
+base_url = "https://marlescodesolutions.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+theme = "shadharon"
+
+taxonomies = [
+    {name = "tags", feed = true},
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+
+[extra]
+toc = true
+use_cdn = false
+search_bar = true
+
+#Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
+favicon = ""
+
+#This header image is used for SEO. For example if you were to share an image via Messenger/Instagram/Twitter a preview picture is also presented
+headerImage = ""
+
+# The icon is display besides the menu text but is not necessary. It needs to be placed under "menu_icon" in the static "folder"
+menu = [
+    { name = "Projects", url = "/projects", weight = 1, icon = "projects.png" },
+]
+#The icons available can be found in "social_icons" in the "static" folder
+socials = [
+    { name = "github", url = "https://github.com/syedzayyan/", icon = "github" },
+]
