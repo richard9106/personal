@@ -36,3 +36,7 @@ menu = [
 socials = [
     { name = "github", url = "https://github.com/syedzayyan/", icon = "github" },
 ]
+
+stylesheets = [
+    "css/custom.css",
+]
