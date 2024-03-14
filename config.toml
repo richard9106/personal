@@ -34,7 +34,7 @@ menu = [
 ]
 #The icons available can be found in "social_icons" in the "static" folder
 socials = [
-    { name = "github", url = "https://github.com/syedzayyan/", icon = "github" },
+    { name = "github", url = "https://github.com/richard9106/", icon = "github" },
 ]
 
 stylesheets = [
