@@ -1,5 +1,7 @@
 /*Globals_________________*/
-
+a::hover{
+    background-color: transparent;
+}
 
 /*Nav_____________________*/
 .logo-nav{
