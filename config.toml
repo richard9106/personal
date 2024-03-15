@@ -41,5 +41,5 @@ socials = [
 ]
 
 stylesheets = [
-    "./css/custom.css",
+    "css/custom.css",
 ]
