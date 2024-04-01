@@ -20,7 +20,7 @@ highlight_theme = "css"
 [extra]
 toc = true
 use_cdn = false
-search_bar = true
+search_bar = false
 
 #Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
 favicon = ""
@@ -30,10 +30,12 @@ headerImage = ""
 
 # The icon is display besides the menu text but is not necessary. It needs to be placed under "menu_icon" in the static "folder"
 menu = [
+    { name = "", url = "/", icon = "menu_icon"},
     { name = "Home", url = "/", weight = 1 },
     { name = "Projects", url = "/projects", weight = 1},
     
 ]
+
 #The icons available can be found in "social_icons" in the "static" folder
 socials = [
     { name = "github", url = "https://github.com/richard9106/", icon = "github" },
@@ -41,5 +43,8 @@ socials = [
 ]
 
 stylesheets = [
+    "sass",
+    "css/normalize.css",
     "css/custom.css",
+    "css/animate-background.css",
 ]

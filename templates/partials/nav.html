@@ -1,0 +1,42 @@
+<header>
+    <div class="navbar ">
+        <div class="nav-title nav-navs">
+            <a class="logo-nav" href={{ config.base_url }}>
+                {% for menu in config.extra.menu %}
+                {%- if menu.icon %}
+                <img alt={{ menu.name }} height="50px" width="50px" src="/images/{{menu.icon}}.png" />
+                {% endif %}
+                {% endfor %}
+            </a>
+        </div>
+
+        {%- if config.extra.menu %}
+        <nav class="nav-title nav-navs">
+            {% for menu in config.extra.menu %}
+            <a class="nav-links" href={{ menu.url }}>{{ menu.name }}</a>
+            {% endfor %}
+     
+        </nav>
+        {% endif %}
+
+        <nav class="socials nav-navs">
+            {%- if config.extra.search_bar %}
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎   Search">
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            {% endif %}
+            <label class="theme-switcher" for="themeswitch">
+                <div class="background"></div>
+                <input type="checkbox" id="themeswitch">
+                <div class="switch">
+                    <img alt = "theme switch to dark" class="moon" src="/menu_icon/moon.png">
+                    <img alt = "theme switch to light" class="sun" src="/menu_icon/sun.png">
+                </div>
+            </label>
+        </nav>
+        
+    </div>
+</header>
