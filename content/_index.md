@@ -1,5 +1,5 @@
 +++
 [extra]
-section_path = "posts/_index.md"
+section_path = "home/_index.md"
 template = "base.html"
 +++

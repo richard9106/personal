@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block main_content %}
+{% block general_content %}
+
     {% if section.extra.section_path -%}
         {% set section = get_section(path=section.extra.section_path) %}
     {% endif -%}
@@ -32,4 +33,4 @@
             {% endif %}
         </ul>
     {% endif %}
-{% endblock main_content %}
+{% endblock general_content %}

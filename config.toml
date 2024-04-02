@@ -32,7 +32,10 @@ headerImage = ""
 menu = [
     { name = "", url = "/", icon = "menu_icon"},
     { name = "Home", url = "/", weight = 1 },
-    { name = "Projects", url = "/projects", weight = 1},
+    { name = "Portfolio", url = "/portfolio", weight = 1},
+    { name = "About Me", url = "/about", weight = 1},
+    { name = "Blog", url = "/blog", weight = 1},
+    { name = "Contact Me", url = "/contact", weight = 1},
     
 ]
 

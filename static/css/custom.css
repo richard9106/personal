@@ -10,9 +10,25 @@ p{
     font-size: small;
 }
 /*utilities*/
-.position-relative{
+div.position-relative{
     position: relative;
-    
+}
+.under-line:before{
+    content: "";
+    width: 150px;
+    margin: 10px auto 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    background-color:orangered;
+}
+
+/*base.html css */
+div.main-container{
+    margin: 0 auto;
+    width: 80%;
 }
 
 /*index with my info*/
@@ -32,6 +48,10 @@ p{
 div.info-container{
     padding:80px 20px 20px 20px;
     border-radius: 10px;
+}
+div.personal-info{
+    margin: 10px auto 0;
+    width: 80%;
 }
 
 .institute:before{

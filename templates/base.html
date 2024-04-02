@@ -19,17 +19,26 @@
             <li></li>
         </ul>
        
-    <div class="index-main-container">
-        {# Post page is the default #}
-        {% include "partials/nav.html" %}
-        {% block main_content %}
-        
-        {% endblock main_content %}
+    <div class=" mt-5 row row-cols-2 main-container">
+        <div class="col-4">
+            {% set section = get_section(path="home/_index.md") %}
+            {{ post_macros::page_desc(desc=section.extra.desc) }}
+        </div>
+        <div class="col-8">
+            <div class="row">
+                {% include "partials/nav.html" %}
+            </div>
+            <div class=" row">
+               <p>
+                {% block general_content %}
+
+                {% endblock %}
+               </p>
+            </div>
+        </div>
     </div>
-
-    {% include "partials/footer.html" %}
-
    
+        {% include "partials/footer.html" %}
 </div >
 </body>
 

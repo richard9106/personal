@@ -1,8 +1,8 @@
 {% macro list_posts(pages) %}
 <div class="bloglist-container">
     {%- for page in pages %}
-    <section class="bloglist-table-row">
-        <h3>
+    <section class="bloglist-table-row ">
+        <h3 class="fs-5 text-center">
             <a href={{ page.permalink }}>{{page.title}}</a>
         </h3>
 
@@ -49,6 +49,8 @@
 </div>
 {% endmacro list_posts %}
 
+<!--end macro list posts-->
+
 {% macro tags(page, short=false) %}
 {%- if page.taxonomies and page.taxonomies.tags %}
 <span class="post-tags-inline">
@@ -67,17 +69,23 @@
 {% endif -%}
 {% endmacro tags %}
 
+<!--end macro tags-->
+
 {% macro page_header(title) %}
-<h2>
-    {{ title }}
-</h2>
+<div class=" position-relative">
+    <h2 class="text-center under-line">
+        {{ title }}
+    </h2>
+</div>
+
 {% endmacro content %}
 
+<!--end macro header title-->
+
 {% macro page_desc(desc) %}
-<div class="container-fluid mt-5">
+<div class="container-fluid ">
     <!--profile images and my info-->
-    <div class="row">
-        <div class=" col-md-4">
+        <div>
             <div class="d-block position-relative">
                     <div class="text-center">
                         <img alt = "the owner" class="profile-image" src="{{ desc.img }}" />
@@ -102,22 +110,30 @@
                     <br>
                     <a class="institute fw-bold mt-5" href="https://codeinstitute.net/global/">Code Institute</a>
                    </p>
+                   <div class="personal-info">
+                    <p>Email: <strong>{{ desc.email }}</strong></p>
+                    <p>Locattion: <strong>{{ desc.location }}</strong></p>
+                    <p>Phone: <strong>{{ desc.phone }}</strong></p>
                     
+                   </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-8" ">
-            <div class="card border round-2 shadow p-3 mb-3 ">
-                <h2 class="mb-5 fs-3">
-                    {{ desc.title }}
-                </h2>
-                <p>{{ desc.text }}</p>
-                <p>{{ desc.text2 }}</p>
-            </div>
-        </div>
-    </div>  
+   
 </div>
 {% endmacro content %}
+
+{% macro about(desc)%}
+    <div class="card border round-2 shadow p-3 mb-3 ">
+        <h2 class="mb-5 fs-3">
+            {{ desc.title }}
+        </h2>
+        <p>{{ desc.text }}</p>
+    </div>
+
+{% endmacro content %}
+
+<!--end macro desc-->
 
 {% macro content(page) %}
 <main>
@@ -197,6 +213,8 @@
 </main>
 {% endmacro content %}
 
+<!--end macro content page-->
+
 {% macro cards_posts(pages) %}
 <div class="cards">
     {%- for page in pages %}
@@ -239,6 +257,8 @@
 </div>
 {% endmacro cards_posts %}
 
+<!--end macro cards-->
+
 {% macro list_title(pages, tag_name=false) %}
 {% if tag_name %}
 <h1>Entries tagged - "{{ term.name }}"</h1>
@@ -256,3 +276,4 @@
 </ul>
 {% endmacro list_title %}
 
+<!--end macro list titles-->
