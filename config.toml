@@ -43,8 +43,8 @@ socials = [
 ]
 
 stylesheets = [
-    "sass",
-    "css/normalize.css",
-    "css/custom.css",
-    "css/animate-background.css",
+    "/sass",
+    "/css/normalize.css",
+    "/css/custom.css",
+    "/css/animate-background.css",
 ]
