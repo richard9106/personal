@@ -1,11 +1,11 @@
 +++
-title = "Shadharon"
-description = "A very good theme probably"
-weight = 1
+title = "The Elite VA"
+description = "Virtual assistant website"
+weight = 2
 
 [extra]
-remote_image = "https://i.natgeofe.com/n/8a3e578f-346b-479f-971d-29dd99a6b699/nationalgeographic_2751013_16x9.jpg"
-link_to = "https://github.com/syedzayyan/well-ts"
+local_image = "images/eliteva.png"
+link_to = "https://the-eliteva.com/"
 
 
 +++

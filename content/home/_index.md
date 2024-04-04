@@ -1,6 +1,6 @@
 +++
 paginate_by = 7
-title = "Home"
+title = "About Me"
 sort_by = "date"
 template = "index.html"
 
