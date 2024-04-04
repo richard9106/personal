@@ -23,9 +23,8 @@ div.position-relative{
     margin: 10px auto 0;
     height: 2px;
     position: absolute;
-    bottom: 15px;
-    left: 0;
-    right: 0;
+    bottom: 10px;
+    left: 15px;
     background-color:orangered;
 }
 .under-line-page-title:before{
@@ -45,11 +44,22 @@ div.position-relative{
 .margin-inline{
     margin-top:65px!important;
 }
+.z-index-front{
+    z-index: 10!important;
+}
 
 /*base.html css */
 div.main-container{
     margin: 0 auto;
     width: 80%;
+}
+
+@media (max-width:480px){
+    div.main-container{
+        margin: 54px 0 !important;
+        width: 100%;
+    }
+    
 }
 
 /* with my info*/

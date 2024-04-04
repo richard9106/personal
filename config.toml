@@ -30,13 +30,15 @@ headerImage = ""
 
 # The icon is display besides the menu text but is not necessary. It needs to be placed under "menu_icon" in the static "folder"
 menu = [
-    { name = "", url = "/", icon = "menu_icon"},
+    { name="", url = "/", icon = "menu_icon"},
     { name = "About", url = "/", weight = 1 },
     { name = "Portfolio", url = "/portfolio", weight = 1}, 
     { name = "Blog", url = "/blog", weight = 1},
     { name = "Contact Me", url = "/contact", weight = 1},
     
 ]
+
+
 
 #The icons available can be found in "social_icons" in the "static" folder
 socials = [

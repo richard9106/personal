@@ -20,12 +20,12 @@
         </ul>
        
     <div class=" mt-5 row row-md-cols-2 main-container ">
-        <div class="col-md-5 col-sm-12">
+        <div class="col-md-5 col-sm-12 m-0">
             {% set section = get_section(path="home/_index.md") %}
             {{ post_macros::page_desc(desc=section.extra.desc) }}
         </div>
         <div class="col-md-7 ">
-            <div class="row">
+            <div class="row z-index-front">
                 {% include "partials/nav.html" %}
             </div>
             <div class=" row">
