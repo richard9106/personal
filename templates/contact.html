@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block general_content %}
+{% if section.extra.section_path -%}
+{% set section = get_section(path=section.extra.section_path) %}
+{% endif -%}
+{{ post_macros::page_header(title=section.title) }}
+
+{{ post_macros::contact() }}
+{% endblock %}

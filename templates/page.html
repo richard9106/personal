@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
-{% block main_content %}
+{% block general_content %}
+    {% if section.extra.section_path -%}
+    {% set page = get_page(path=section.extra.section_path) %}
+    {% endif -%}
+
     {{ post_macros::content(page=page)}}
-{% endblock main_content %}
+{% endblock  %}

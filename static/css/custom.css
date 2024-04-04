@@ -2,12 +2,16 @@
 body{
     min-width: 100%;
 }
+h1,h2,h3,h4{
+    color: var(--text-color);
+}
 a{
     text-decoration: none!important;
-    color: black;
+    
 }
 p{
     font-size: small;
+    color: var(--text-color);
 }
 /*utilities*/
 div.position-relative{
@@ -19,10 +23,27 @@ div.position-relative{
     margin: 10px auto 0;
     height: 2px;
     position: absolute;
-    bottom: -5px;
+    bottom: 15px;
     left: 0;
     right: 0;
     background-color:orangered;
+}
+.under-line-page-title:before{
+    content: "";
+    width: 300px;
+    margin: 10px auto 0;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    background-color:orangered;
+}
+.title{
+    font-size: 1.6rem;
+}
+.margin-inline{
+    margin-top:65px!important;
 }
 
 /*base.html css */
@@ -31,11 +52,8 @@ div.main-container{
     width: 80%;
 }
 
-/*index with my info*/
-.index-main-container{
-    width: 80%;
-    margin: 0 auto;
-}
+/* with my info*/
+
 
 .profile-image{
     border-radius: 50%;
@@ -46,6 +64,7 @@ div.main-container{
     box-shadow: rgba(255, 68, 0, 0.507) 1px 1px 15px ;
 }
 div.info-container{
+    background-color: var(--background-color);
     padding:80px 20px 20px 20px;
     border-radius: 10px;
 }
@@ -65,7 +84,33 @@ div.personal-info{
     right: 0;
     background-color:orangered;
 }
+/*about*/
+div.about-container{
+    background-color: var(--background-color)!important;
+}
 
+/*contact*/
+.contact-form{
+    z-index: 50!important;
+}
+input[type="checkbox"]{
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+
+.btn-submit{
+    background-color: var(--backgroun-button-color)!important;
+    color: var(--color-text-button)!important;
+    border: 1px solid var(--border-color-2)!important;
+}
+.btn-submit:hover{
+    background-color: white!important;
+    color: orangered!important;
+    scale: 1.1;
+    box-shadow: var(--box-sadow-button);
+    transition: all .5s;
+}
 
 /*footer ___________________*/
 
@@ -88,7 +133,6 @@ a.social-link{
     height: auto;
 }
 .social>img{
-    
     width: 35px;
     height: auto;
 }

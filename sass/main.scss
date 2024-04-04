@@ -25,7 +25,7 @@
 
   --bg-0: #121212;
   --bg-1: rgba(255, 255, 255, 5%);
-  --bg-2: rgba(23, 23, 23, 100%);
+  --bg-2: rgba(88, 86, 86, 0.377);
   --primary-color: #ef5350;
   --hover-color: white;
   --background-color:#29292e;
@@ -36,10 +36,16 @@
   --text-color: #f2f2f2;
   --code: #ef476f;
   --border-color: #111;
+  --border-color-2: #fff;
   --light-border-color: rgba(255, 255, 255, 0.1);
   --input-back: #4b4a4a;
   --input-color: #000000;
   --meta-color: rgb(198, 197, 197);
+  --animate-background : rgba(177, 97, 33, 0.384);
+  --link-hover:rgb(212, 108, 39);
+  --backgroun-button-color:transparent;
+  --color-text-button:orangered;
+  --box-sadow-button: -1px -1px 31px -3px rgba(237,130,43,1);
 }
 
 [data-theme="light"] {
@@ -48,6 +54,8 @@
   --bg-2: #fefefe;
   --hover-color: white;
   --background-color:#fff;
+  --backgroun-button-color:orangered;
+  --color-text-button:#fff;
   --navbar-color:#e3e3e3;
   --secondary-color:rgb(158, 158, 158);
   --text-color: #222226;
@@ -58,21 +66,33 @@
   --input-back: rgb(158, 158, 158);
   --input-color: #fbec48;
   --meta-color: rgb(53, 53, 53);
+  --animate-background : rgba(52, 100, 231, 0.384);
+  --link-hover:rgb(53, 151, 28);
+  --box-sadow-button: -1px -1px 10px -3px rgb(56, 56, 56);
 }
 
 html {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6em;
+  
 }
 body{
   margin:0;
   padding:0;
+  background-color: var(--background-color);
 }
 a{
   text-decoration: none;
-  color: #000000 !important;
+  color: var(--text-color)!important;
 }
+a:hover{
+  color: var( --link-hover)!important;
+}
+label{
+  color: black!important;
+}
+
 .content {
   max-width: var(--max-layout-width);
   margin: 0 auto;

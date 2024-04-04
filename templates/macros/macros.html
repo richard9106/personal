@@ -73,14 +73,37 @@
 
 {% macro page_header(title) %}
 <div class=" position-relative">
-    <h2 class="text-center under-line">
+    <h2 class="text-center under-line title my-3">
         {{ title }}
     </h2>
 </div>
 
 {% endmacro content %}
-
 <!--end macro header title-->
+
+{% macro contact() %}
+<form method="POST" class="contact-form border p-3 shadow ">
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" placeholder="Name" required>
+        <label for="floatingInputInvalid">Name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" placeholder="Email" required>
+        <label for="floatingInputInvalid">Email</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Message" id="message" required></textarea>
+        <label for="floatingTextarea">Message</label>
+    </div>
+    
+    <button type="submit" class="btn btn-submit">Submit</button>
+  </form>
+{% endmacro contact %}
+<!--end macro contact-->
+
 
 {% macro page_desc(desc) %}
 <div class="container-fluid ">
@@ -122,9 +145,10 @@
    
 </div>
 {% endmacro content %}
+<!--end macro desc-->
 
 {% macro about(desc)%}
-    <div class="card border round-2 shadow p-3 mb-3 ">
+    <div class="card border round-2 shadow p-3 margin-inline about-container ">
         <h2 class="mb-5 fs-3">
             {{ desc.title }}
         </h2>
@@ -133,14 +157,16 @@
 
 {% endmacro content %}
 
-<!--end macro desc-->
+<!--end macro about-->
 
 {% macro content(page) %}
 <main>
     <article>
-        <div class="title">
-            {#<h1 class="title">{{ page.title }}</h1>#}
-            {{ post_macros::page_header(title=page.title) }}
+        
+        <div class="position-relative">
+            <h2 class="text-center under-line-page-title title my-3">{{ page.title }}</h2>
+        </div>
+            
 
             <div class="meta">
                 {% if page.date %}
@@ -163,7 +189,7 @@
                 {% endif %}
                 ||<span> {{ page.reading_time }} minute read</span>
             </div>
-        </div>
+     
 
         {% if page.extra.tldr %}
         <div class="tldr">
@@ -228,13 +254,13 @@
         {% endif %}
 
         <div class="card-info">
-            <h1 class="card-title">
+            <h3 class="card-title">
                 {% if page.extra.link_to %}
                 <a rel="noopener noreferrer" target="_blank" href={{ page.extra.link_to }}>{{page.title}}</a>
                 {% else %}
                 <a href={{ page.permalink }}>{{page.title}}</a>
                 {% endif %}
-            </h1>
+            </h3>
 
             <div class="meta">
                 {%- if page.date %}
