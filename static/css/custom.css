@@ -1,6 +1,7 @@
 /*Globals*/
 body{
     min-width: 100%;
+    transition: all 0.5s;
 }
 h1,h2,h3,h4{
     color: var(--text-color);
@@ -12,6 +13,21 @@ a{
 p{
     font-size: small;
     color: var(--text-color);
+}
+.theme{
+    position: fixed;
+    top: 50px;
+    right: 40px;
+    z-index: 10;
+    transition: all 0.5s;
+    opacity: 0.5;
+}
+@media (max-width:768px){
+    .theme{
+        transform: rotate(270deg);
+        right: 0px;
+        transition: all 0.5s;
+    }
 }
 /*utilities*/
 div.position-relative{
@@ -50,7 +66,7 @@ div.position-relative{
 
 /*base.html css */
 div.main-container{
-    margin: 0 auto;
+    margin: 100px auto 0;
     width: 80%;
 }
 

@@ -5,6 +5,16 @@
 {% include "partials/header.html" %}
 
 <body>
+    <div class="theme">
+        <label class="theme-switcher" for="themeswitch">
+            <div class="background"></div>
+            <input type="checkbox" id="themeswitch">
+            <div class="switch">
+                <img alt = "theme switch to dark" class="moon" src="/menu_icon/moon.png">
+                <img alt = "theme switch to light" class="sun" src="/menu_icon/sun.png">
+            </div>
+        </label>
+    </div>
     <div class="area" >
         <ul class="circles">
             <li></li>
@@ -19,7 +29,7 @@
             <li></li>
         </ul>
        
-    <div class=" mt-5 row row-md-cols-2 main-container ">
+    <div class=" row row-md-cols-2 main-container ">
         <div class="col-md-5 col-sm-12 m-0">
             {% set section = get_section(path="home/_index.md") %}
             {{ post_macros::page_desc(desc=section.extra.desc) }}

@@ -11,8 +11,8 @@
               <!-- <button class="navbar-toggler burguer-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon border"></span>
               </button> -->
-              <div class="mt-sm-5 mt-lg-0">
-                <div>
+              <div class="my-sm-5 mt-lg-0">
+                <div class="links">
                     {% for menu in config.extra.menu %}
                     {%- if menu.name != "" %}
                         <a class="link-container mx-1" href={{ menu.url }}>{{ menu.name }}</a>

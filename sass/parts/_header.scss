@@ -19,44 +19,58 @@ header {
   width: 100%;
   background-color: transparent;
 }
-.nav-container{
+.nav-container {
   font-size: 15px;
   position: sticky;
   display: flex;
   align-items: center;
-  justify-content: space-between!important;
-  z-index: 2!important;
-  }
+  justify-content: space-between !important;
+  z-index: 2 !important;
+}
+.link-container {
+  border: 1px solid orangered;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 15px;
+  max-width: 50px;
+  border-radius: 5px;
+  transition: 100ms;
+}
 
-
-@media only screen and (max-width:1000px) {
-  .navbar{
+@media only screen and (max-width: 1000px) {
+  .navbar {
     max-width: var(--normal-layout-width);
   }
-  .nav-navs{
+  .nav-navs {
     margin: 0 auto;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-@media (max-width:780px) {
-  .nav-container{
-  display: block;
-  text-align: center;
+@media (max-width: 780px) {
+  .nav-container {
+    display: block;
+    text-align: center;
   }
-  
+}
+@media (max-width: 480px) {
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 5px;
+  }
+  .links > a {
+    flex: 1 1 200px;
+  }
+  .link-container {
+    min-width: fit-content;
+    padding: 15px;
+  }
 }
 
-.link-container{
-  border: 1px solid orangered;
-  text-decoration: none;
-  color: var(--text-color);
-  padding:15px;
-  max-width: 50px;
-  border-radius:5px;
-  transition:100ms;
-}
 header .main {
   display: flex;
   flex-direction: row;
@@ -69,12 +83,12 @@ header .main {
   /* Otherwise header and menu is too close on small screens*/
   margin-bottom: 10px;
 }
-.nav-navs img{
+.nav-navs img {
   border: none;
 }
-.home-title{
+.home-title {
   font-size: 1.6em;
-  color:#ff3344;
+  color: #ff3344;
 }
 .socials {
   /* flex-child */
@@ -94,14 +108,14 @@ header .main {
   padding: 2px;
 }
 
-.social>img {
+.social > img {
   border: unset;
   width: 24px;
   height: 24px;
   filter: invert(1);
-  }
+}
 
-[data-theme="light"] .social>img {
+[data-theme="light"] .social > img {
   filter: invert(0);
 }
 
