@@ -29,20 +29,25 @@
             </span>
         </div>
 
-        <br />
         <div class="description">
-            {% if page.description %}
-            {{ page.description }}
-            {% elif page.summary %}
-            {{ page.summary | safe }}&hellip;
-            {% else %}
-            {% set hide_read_more = true %}
-            {% endif %}
+            <p class="m-0">
+                {% if page.description %}
+                {{ page.description }}
+                {% elif page.summary %}
+                {{ page.summary | safe }}&hellip;
+                {% else %}
+                {% set hide_read_more = true %}
+                {% endif %}
+            </p>
+            <div class="read-more">
+                {% if not hide_read_more %}
+                <a class="readmore" href={{ page.permalink }}>Read more ⟶</a>
+                {% endif %}
+            </div>
+            
         </div>
 
-        {% if not hide_read_more %}
-        <a class="readmore" href={{ page.permalink }}>Read more ⟶</a>
-        {% endif %}
+     
     </section>
 
     {% endfor -%}
@@ -82,24 +87,24 @@
 <!--end macro header title-->
 
 {% macro contact() %}
-<form method="POST" class="contact-form border p-3 shadow mt-2">
+<form method="POST" action="https://formspree.io/f/mjvnpagq" class="contact-form border p-3 shadow mt-2">
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="name" placeholder="Name" required>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
         <label for="floatingInputInvalid">Name</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="email" placeholder="Email" required>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
         <label for="floatingInputInvalid">Email</label>
     </div>
 
     <div class="form-floating mb-3">
-        <textarea class="form-control" placeholder="Message" id="message" required></textarea>
+        <textarea class="form-control" placeholder="Message" name="message" id="message" required></textarea>
         <label for="floatingTextarea">Message</label>
     </div>
     
-    <button type="submit" class="btn btn-submit">Submit</button>
+    <button type="submit" class="btn btn-submit" name="submit">Submit</button>
   </form>
 {% endmacro contact %}
 <!--end macro contact-->

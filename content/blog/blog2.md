@@ -1,6 +1,7 @@
 +++
-title = "Markdown Test"
-date = "2022-01-01"
+title = "Career change "
+description = "it's worth it? we will see"
+date = "2024-04-04"
 
 [taxonomies]
 tags = ["thoughts"]
@@ -8,19 +9,18 @@ tags = ["thoughts"]
 
 ## Code Block
 
-```rust
-fn main() {
-    println!("Hello World");
-}
-```
 
 ## Quote
 
-> I'm gonna make him an offer he can't refuse
-- Godfather
+> If you are thinking about making a car change, this is my personal opinion.
+
+## My experience
+
+
 
 
 ## Code tags
 
-Lorem ipsum `dolor` sit amet, `consectetur adipiscing` elit. 
-`Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+`career` , `confort zone` get out!!. 
+
+`the impossible becomes possible`, you can do it.
